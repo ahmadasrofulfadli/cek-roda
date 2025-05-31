@@ -7,6 +7,7 @@ plugins {
 alias(libs.plugins.google.gms.google.services)
 alias(libs.plugins.google.firebase.crashlytics)
 }
+
 android {
     namespace = "com.cekroda"
     compileSdk = 35
