@@ -2,11 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.firebase.crashlytics)
 }
-plugins {
-alias(libs.plugins.google.gms.google.services)
-alias(libs.plugins.google.firebase.crashlytics)
-}
+
 
 android {
     namespace = "com.cekroda"
@@ -55,6 +54,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.firebase.crashlytics)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -82,7 +82,7 @@ dependencies {
     implementation(libs.koin.compose)
     implementation(libs.koin.navigation)
     implementation(libs.koin.viewmodel)
-    implementation(libs.firebase.crashlytics)
+    
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
