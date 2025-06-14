@@ -30,7 +30,6 @@ throw RuntimeException("Test Crash")
  }
  )
 }
-        ,
                 onInspectionClick = {
                     throw RuntimeException("Test Crash")
                     // TODO: navigasi ke detail inspection
